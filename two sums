@@ -1,0 +1,7 @@
+def twoSum(nums, target):
+    new = {}
+    for ind, num in enumerate(nums):
+        if target - num in new:
+            return(ind, new[target - num])
+        else:
+            new[num] = ind
