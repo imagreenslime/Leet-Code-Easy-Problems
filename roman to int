@@ -1,0 +1,34 @@
+I, V, X, L, C, D, M = 1, 5, 10, 50, 100, 500, 1000
+IV, IX, XL, XC, CD, CM = 4, 9, 40, 90, 400, 900
+def romanToInt(num):
+    answer = 0
+    b = 0
+    for a in num:
+        if a == "M":
+            answer += M
+            if num[b - 1] == "C" and b > 0:
+                answer += (CM - C) - M
+        if a == "D":
+            answer += D
+            if num[b - 1] == "C" and b > 0:
+                answer += (CD - C) - D
+        if a == "C":
+            answer += C
+            if num[b - 1] == "X" and b > 0:
+               answer += (XC - X) - C
+        if a == "L":
+            answer += L
+            if num[b - 1] == "X" and b > 0:
+                answer += (XL - X) - L
+        if a == "X":
+            answer += X
+            if num[b - 1] == "I" and b > 0:
+                answer += (IX - I) - X
+        if a == "V":
+            answer += V
+            if num[b - 1] == "I" and b > 0:
+                answer += (IV - I) - V
+        if a == "I":
+            answer += I
+        b += 1
+    return answer
