@@ -1,7 +1,10 @@
 def twoSum(nums, target):
     new = {}
+    # hash table
     for ind, num in enumerate(nums):
         if target - num in new:
+        # check if answer in hash table, if not add the number
+        # repeat till answer is found
             return(ind, new[target - num])
         else:
             new[num] = ind
