@@ -1,0 +1,9 @@
+def lengthOfLastWord(s):
+    li = list(s.split(" "))
+    # turn str into list
+    for a in range(len(li) - 1, -1, -1):
+        if len(li[a]) < 1:
+            li.remove(li[a])
+    # remove all the spaces from the end
+    return(len(li[-1]))
+    # return len of last word
