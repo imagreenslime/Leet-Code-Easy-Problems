@@ -1,0 +1,7 @@
+def intersect(nums1, nums2):
+    hash = []
+    for a in range(len(nums1)):
+        if nums1[a] in nums2:
+            hash.append(nums1[a])
+            nums2.remove(nums1[a])
+    return hash
