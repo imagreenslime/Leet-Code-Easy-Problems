@@ -3,5 +3,7 @@
         number = 0
         while temp > 0:
             number = (number * 10) + (temp % 10)
+            # get the ones place and put it at top of answer
             temp = temp // 10
+            # remove that number and repeat till answer
         return number == x
