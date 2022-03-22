@@ -4,4 +4,5 @@ def intersect(nums1, nums2):
         if nums1[a] in nums2:
             hash.append(nums1[a])
             nums2.remove(nums1[a])
+            # remove so repeats arent saved
     return hash
