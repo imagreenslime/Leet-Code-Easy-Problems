@@ -3,9 +3,11 @@ def mySqrt(x):
         return 1
     counter = 0
     for a in range(1, x, 2):
+        # you can find the root of a number if you keep subtracting it from 1, 3, 5, 7 and count each time you add 2
         x -= a
         if x >= 0:
             counter += 1
         else:
             break
+            # answer rounded because it was required
     return counter
