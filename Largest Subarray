@@ -1,0 +1,11 @@
+def maxSubArray(nums):
+    fullmax, currentmax = nums[0], nums[0]
+    for a in nums[1:]:
+        if currentmax < 0:
+            currentmax = 0
+            # if the continuing number ever dips below zero, we start a new subarray to compare to our max
+        currentmax += a
+        if currentmax > fullmax:
+            fullmax = currentmax
+            #whenever the current subarray is bigger then the biggest subarray, set the current to the biggest 
+    return fullmax
