@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/intersection-of-two-arrays-ii/
 def intersect(nums1, nums2):
     hash = []
     for a in range(len(nums1)):
